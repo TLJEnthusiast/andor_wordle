@@ -20,24 +20,39 @@
 
     <datalist id="characters">
         {% for name in WORDLE_DATA %}
-        <option value="{{name}}" />
+            {% if name != "NAME" %}
+            <option value="{{name}}" />
+            {% endif %}
         {% endfor %}
       </datalist>
 
     <table>
         <tr>
-            <th>Name</th>
-            <th>Affiliation</th>
-            <th>Home Planet</th>
-            <th>Species</th>
-            <th>Ferrix</th>
-            <th>Aldhani</th>
-            <th>Narkina-5</th>
+                    <th>Name</th>
+            {% for header in WORDLE_DATA["NAME"] %}
+                {% if header == "Episodes" %}
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                {% else %}
+                    <th>{{ header }}</th>
+                {% endif %}
+            {% endfor %}
         </tr>
+
         {% for name in entered_data %}
         <tr>
             <td>{{ name }}</td>
-            {% for i in entered_data[name] %}
+            {% for i in WORDLE_DATA[name] %}
 
             <td>{{ i }}</td>
 

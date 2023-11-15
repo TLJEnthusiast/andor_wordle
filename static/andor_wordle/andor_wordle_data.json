@@ -1,12 +1,12 @@
 {
     "NAME": [
-        "SEX",
-        "AFFILIATION",
-        "HOME PLANET", 
-        "SPECIES", 
-        "DIES?", 
-        "ACCENT",
-        "EPISODES THEY APPEAR IN"
+        "Sex",
+        "Affiliation",
+        "Home World", 
+        "Species", 
+        "Dies?", 
+        "Accent",
+        "Episodes"
     ], 
     "Cassian Andor": [
         "Male",
