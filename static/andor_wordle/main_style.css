@@ -1,0 +1,19 @@
+body {
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: #80040c;
+    background-color: #d15904;
+}
+h1 {
+    text-align: center;
+}
+.header {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+.search {
+    display: flex;
+    justify-content: center;
+}

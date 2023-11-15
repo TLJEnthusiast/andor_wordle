@@ -1,0 +1,38 @@
+{
+    "NAME": [
+        "SEX",
+        "AFFILIATION",
+        "HOME PLANET", 
+        "SPECIES", 
+        "DIES?", 
+        "ACCENT",
+        "EPISODES THEY APPEAR IN"
+    ], 
+    "Cassian Andor": [
+        "Male",
+        false,
+        "Fest",
+        "Human",
+        false,
+        "Mexican",
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    ],
+    "Luthen Rael": [
+        "Male",
+        "Rebel",
+        "Coruscant",
+        "Human",
+        false,
+        "Swedish",
+        [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    ],
+    "Mon Mothma": [
+        "Female",
+        "Rebel",
+        "Chandrila",
+        "Human",
+        false,
+        "British",
+        [4, 5, 6, 7, 8, 9, 10, 11, 12]
+    ]
+}

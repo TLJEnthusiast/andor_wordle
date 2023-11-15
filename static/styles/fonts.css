@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Telegraf';
+    src: url("../assets/fonts/Telegraf-Regular.woff2") format("woff2"),url("../assets/fonts/Telegraf-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Agrandir';
+    src: url("../assets/fonts/Agrandir-GrandHeavy.woff2") format("woff2"),url("../assets/fonts/Agrandir-GrandHeavy.woff") format("woff");
+    font-weight: 800;
+    font-style: normal
+}

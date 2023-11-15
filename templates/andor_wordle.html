@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src='{{ url_for("static", filename="andor_wordle/main_script.js")}}'></script>
+    <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="andor_wordle/main_style.css")}}'>
+    <title>Andor Wordle</title>
+</head>
+<body>
+
+    <h1>andor wordle</h1>
+
+    <form method="post">
+    <div class="search">
+        <input class="character_search" type="search" list="characters" autocomplete="off" name="wordle_input" placeholder="Pick a Character">
+    </div>
+    </form>
+
+    <datalist id="characters">
+        {% for name in WORDLE_DATA %}
+        <option value="{{name}}" />
+        {% endfor %}
+      </datalist>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Affiliation</th>
+            <th>Home Planet</th>
+            <th>Species</th>
+            <th>Ferrix</th>
+            <th>Aldhani</th>
+            <th>Narkina-5</th>
+        </tr>
+        {% for name in entered_data %}
+        <tr>
+            <td>{{ name }}</td>
+            {% for i in entered_data[name] %}
+
+            <td>{{ i }}</td>
+
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
