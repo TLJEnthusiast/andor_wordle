@@ -9,6 +9,7 @@ app.secret_key = b"wX=a+`#3fK^;CjU~8(:JL'"
 
 @app.route("/", methods=["GET", "POST"])
 def wordle():
+    print(WORDLE_DATA)
     if request.method == "POST":
         input: str = request.form["wordle_input"].strip()
         if input in WORDLE_DATA:
@@ -27,7 +28,16 @@ if __name__ == "__main__":
     json_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "andor_wordle", "andor_wordle_data.json")
     with open(json_data_path, "r", encoding="utf-8") as data: 
         WORDLE_DATA: dict = json.load(data)
-    entered_data: list = []
+
+        # Format data, converts the list of episodes into booleans
+        for key, value in WORDLE_DATA.items():
+            if not isinstance(value[-1], list):
+                continue
+            temporary_list = []
+            temporary_list: list = value.pop()
+            for episode in range(1, 13):
+                value.append(episode in temporary_list)
+            entered_data: list = []
     
     # Choose random character 
     current_chosen_character: str = choose_random_character()
