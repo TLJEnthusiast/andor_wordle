@@ -9,14 +9,14 @@ app.secret_key = b"wX=a+`#3fK^;CjU~8(:JL'"
 
 @app.route("/", methods=["GET", "POST"])
 def wordle():
-    print(WORDLE_DATA)
     if request.method == "POST":
         input: str = request.form["wordle_input"].strip()
         if input in WORDLE_DATA:
             entered_data.append(input) if input not in entered_data else None
             if input == current_chosen_character:
                 print(f"{current_chosen_character} was guessed correctly!")
-    return render_template("andor_wordle.html", WORDLE_DATA=WORDLE_DATA, entered_data=entered_data)
+    return render_template("andor_wordle.html", WORDLE_DATA=WORDLE_DATA, entered_data=entered_data, current_chosen_character=current_chosen_character)
+
 
 def choose_random_character() -> str:
     '''Chooses a random character from the wordle data and returns it.'''

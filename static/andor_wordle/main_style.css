@@ -17,3 +17,9 @@ h1 {
     display: flex;
     justify-content: center;
 }
+.True {
+    background-color: green;
+}
+.False {
+    background-color: red;
+}

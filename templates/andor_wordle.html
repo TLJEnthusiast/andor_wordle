@@ -51,10 +51,10 @@
 
         {% for name in entered_data %}
         <tr>
-            <td>{{ name }}</td>
-            {% for i in WORDLE_DATA[name] %}
+            <td class="{{name == current_chosen_character}}">{{ name }}</td>
+            {% for guess in WORDLE_DATA[name]|WORDLE_DATA[current_chosen_character] %}
 
-            <td>{{ i }}</td>
+            <td>{{ guess }}, richtig wäre:  {{ truth }} </td>
 
             {% endfor %}
         </tr>
