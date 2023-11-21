@@ -24,4 +24,4 @@ pip freeze
 echo ""; echo "Done!"; echo ""
 
 echo "Running the main script now..."; echo ""
-python "$SCRIPT_DIR/main.py"
+python3 app.py
