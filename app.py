@@ -25,7 +25,7 @@ def choose_random_character() -> str:
 if __name__ == "__main__":
     
     # Load wordle data
-    json_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "andor_wordle", "andor_wordle_data.json")
+    json_data_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "andor_wordle", "andor_wordle_data.json")
     with open(json_data_path, "r", encoding="utf-8") as data: 
         WORDLE_DATA: dict = json.load(data)
 
