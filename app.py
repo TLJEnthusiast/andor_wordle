@@ -19,8 +19,20 @@ def wordle():
 
 
 def choose_random_character() -> str:
-    '''Chooses a random character from the wordle data and returns it.'''
-    return random.choice(list(WORDLE_DATA.keys()))
+    '''Chooses a random character from the wordle data and returns it. Additionally, it formats the WORDLE_DATA to include a boolean for every entry whether or not it's the same as corresponding value for the chosen character.'''
+    global WORDLE_DATA
+    choice = random.choice(list(WORDLE_DATA.keys())[1::])
+
+    #format 
+    result_dict = {}
+    for character, char_list in WORDLE_DATA.items():
+        # Compare each element in the lists and create a new list
+        new_list = [(value, value == correct_value) for value, correct_value in zip(char_list, WORDLE_DATA[choice])]
+        result_dict[character] = new_list
+    WORDLE_DATA = result_dict
+    
+    return choice 
+
 
 if __name__ == "__main__":
     
@@ -38,6 +50,7 @@ if __name__ == "__main__":
             for episode in range(1, 13):
                 value.append(episode in temporary_list)
             entered_data: list = []
+        
     
     # Choose random character 
     current_chosen_character: str = choose_random_character()

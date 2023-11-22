@@ -30,7 +30,7 @@
         <tr>
                     <th>Name</th>
             {% for header in WORDLE_DATA["NAME"] %}
-                {% if header == "Episodes" %}
+                {% if header[0] == "Episodes" %}
                     <th>1</th>
                     <th>2</th>
                     <th>3</th>
@@ -44,7 +44,7 @@
                     <th>11</th>
                     <th>12</th>
                 {% else %}
-                    <th>{{ header }}</th>
+                    <th>{{ header[0] }}</th>
                 {% endif %}
             {% endfor %}
         </tr>
@@ -52,13 +52,18 @@
         {% for name in entered_data %}
         <tr>
             <td class="{{name == current_chosen_character}}">{{ name }}</td>
-            {% for guess in WORDLE_DATA[name]|WORDLE_DATA[current_chosen_character] %}
+            {% for i in WORDLE_DATA[name] %}
 
-            <td>{{ guess }}, richtig wäre:  {{ truth }} </td>
+            <td class="{{ i[1] }}">{{ i[0] }}</td>
 
             {% endfor %}
         </tr>
         {% endfor %}
     </table>
+
+<!-- what should happen if the correct answer was entered -->
+{% if current_chosen_character in entered_data %}
+<script>alert("Correct answer!")</script>
+{% endif %}
 </body>
 </html>

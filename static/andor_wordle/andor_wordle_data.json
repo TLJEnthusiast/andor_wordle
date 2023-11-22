@@ -34,5 +34,23 @@
         false,
         "British",
         [4, 5, 6, 7, 8, 9, 10, 11, 12]
+    ],
+    "Kleya Marki": [
+        "Female", 
+        "Rebel", 
+        "Coruscant", 
+        "Human", 
+        false, 
+        "British", 
+        [4, 5, 6, 7, 8, 10, 11]
+    ],
+    "Bix Caleen": [
+        "Female",
+        "None",
+        "Ferrix",
+        "Human",
+        false,
+        "American",
+        [1, 2, 3, 7, 8, 9, 11, 12]
     ]
 }

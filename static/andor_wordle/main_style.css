@@ -3,13 +3,12 @@ body {
     left: 0;
     margin: 0;
     background-color: #80040c;
-    background-color: #d15904;
 }
 h1 {
     text-align: center;
 }
 .header {
-    background-color: red;
+    background-color: #cd1515;
     display: flex;
     justify-content: center;
 }
