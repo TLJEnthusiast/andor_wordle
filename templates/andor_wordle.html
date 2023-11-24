@@ -21,7 +21,7 @@
     <datalist id="characters">
         {% for name in WORDLE_DATA %}
             {% if name != "NAME" %}
-            <option value="{{name}}" />
+            <option data-image='{{ url_for("static", filename="bild1.jpg")}}' value="{{name}}" />
             {% endif %}
         {% endfor %}
       </datalist>

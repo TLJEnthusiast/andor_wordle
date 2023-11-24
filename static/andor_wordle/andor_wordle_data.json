@@ -52,5 +52,41 @@
         false,
         "American",
         [1, 2, 3, 7, 8, 9, 11, 12]
+    ],
+    "Timm Karlo": [
+        "Male", 
+        "None", 
+        "Ferrix", 
+        "Human", 
+        true, 
+        "Scottish",
+        [1 ,2, 3]
+    ],
+    "Syril Karn": [
+        "Male",
+        "Empire",
+        "Coruscant",
+        "Human",
+        false,
+        "American",
+        [1, 2, 3, 4, 5, 7, 8, 9, 11, 12]  
+    ],
+    "Dedra Meero": [
+        "Female",
+        "Empire",
+        "Coruscant",
+        "Human",
+        false,
+        "British",
+        [4, 5, 6, 7, 8, 9, 10, 11, 12]
+    ],
+    "Blevin": [
+        "Male",
+        "Empire",
+        "Coruscant",
+        "Human",
+        false,
+        "British",
+        [4, 5, 6, 7, 9]
     ]
 }
